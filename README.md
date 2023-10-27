@@ -27,3 +27,7 @@
     - H是脑子中的记忆
     - C是日记本上的记忆
     - 得到记忆，都要用到tanh操作
+- 在seq2seq中
+    - outputs是encoder最上面一层的数据，每一个时间步生成一个
+    - state/隐状态，是竖着的每个h，传递给decoder的就是最后一个时间步的所有h
+    - decoder的context是encoder最后一层的state的和decoder的输入的cat
